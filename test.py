@@ -1,7 +1,7 @@
 import torch
 from torch.utils.cpp_extension import load
 
-kernels = load(name="kernels", sources=["vecadd.cu"])
+kernels = load(name="kernels", sources=["vecadd_kernel.cu"])
 
 a = torch.randn(1000, device="cuda")
 b = torch.randn(1000, device="cuda")
